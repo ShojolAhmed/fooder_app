@@ -23,7 +23,7 @@ class HomeScreen extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  'Hello, Yahya',
+                  'Hello, User',
                   style: TextStyle(
                     fontSize: 28,
                     fontWeight: FontWeight.bold,
@@ -54,6 +54,7 @@ class HomeScreen extends StatelessWidget {
                   'Today\'s Promo',
                   style: TextStyle(
                     fontSize: 23,
+                    fontWeight: FontWeight.bold,
                     color: kPrimaryTextColor,
                   ),
                 ),
