@@ -1,7 +1,7 @@
 import 'package:fooder_app/model/food.dart';
 import 'package:fooder_app/model/restaurant.dart';
 
-const List<Restaurant> restaurants = [
+const List<Restaurant> dummyRestaurants = [
   Restaurant(
     id: 'r1',
     name: 'Kacchi Dorbar',
@@ -95,7 +95,7 @@ const List<Restaurant> restaurants = [
   ),
 ];
 
-const List<Food> foods = [
+const List<Food> dummyFoods = [
   Food(
     name: 'Mutton Kacchi',
     imageUrl:

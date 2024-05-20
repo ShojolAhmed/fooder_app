@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fooder_app/main.dart';
 import 'package:fooder_app/values/colors.dart';
 import 'package:fooder_app/values/constants.dart';
 import 'package:fooder_app/widgets/home/grid_row.dart';
@@ -15,8 +16,7 @@ class HomeScreen extends StatelessWidget {
       child: Column(
         children: [
           // TOP PART:
-          // this container contains header texts
-          // and grid items shown in top part
+          // header texts and grid items
           Container(
             padding: const EdgeInsets.symmetric(horizontal: kHorizontalPadding),
             child: const Column(
@@ -68,9 +68,9 @@ class HomeScreen extends StatelessWidget {
             ),
           ),
           // slider
-          const SizedBox(
+          SizedBox(
             height: 350,
-            child: PromoSlider(),
+            child: PromoSlider(promoItems: promoItemsList),
           )
         ],
       ),

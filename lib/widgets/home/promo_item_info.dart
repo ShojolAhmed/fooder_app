@@ -6,14 +6,14 @@ class PromoItemInfo extends StatelessWidget {
   const PromoItemInfo({
     super.key,
     required this.title,
-    required this.description,
+    required this.location,
     required this.currentPrice,
     required this.previousPrice,
     required this.amountLeft,
   });
 
   final String title;
-  final String description;
+  final String location;
   final double currentPrice;
   final double previousPrice;
   final int amountLeft;
@@ -50,7 +50,7 @@ class PromoItemInfo extends StatelessWidget {
               const SizedBox(height: 4),
               // DESCRIPTION
               Text(
-                description,
+                location,
                 maxLines: 1,
                 overflow: TextOverflow.ellipsis,
                 style: const TextStyle(

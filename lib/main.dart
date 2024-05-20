@@ -1,4 +1,8 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
+import 'package:fooder_app/data/dummy_data.dart';
+import 'package:fooder_app/model/food_and_restaurant.dart';
 import 'package:fooder_app/screens/home_screen.dart';
 import 'package:fooder_app/screens/search_screen.dart';
 import 'package:fooder_app/screens/shop_screen.dart';
@@ -8,7 +12,32 @@ import 'package:fooder_app/values/constants.dart';
 import 'package:fooder_app/values/styles.dart';
 import 'package:fooder_app/widgets/navigation_bar/navigation_bar_button.dart';
 
+final List<FoodAndRestaurant> foodAndRestaurantList = [];
+final List<FoodAndRestaurant> promoItemsList = [];
+void generateFoodAndRestaurantList() {
+  for (var food in dummyFoods) {
+    for (var restaurant in dummyRestaurants) {
+      if (restaurant.id == food.restaurantId) {
+        foodAndRestaurantList.add(FoodAndRestaurant(
+          food: food,
+          restaurant: restaurant,
+        ));
+      }
+    }
+  }
+}
+
+List<FoodAndRestaurant> generatePromoItems() {
+  for (var i = 0; i < 5; i++) {
+    promoItemsList.add(
+        foodAndRestaurantList[Random().nextInt(foodAndRestaurantList.length)]);
+  }
+  return promoItemsList;
+}
+
 void main() {
+  generateFoodAndRestaurantList();
+  generatePromoItems();
   runApp(const App());
 }
 
