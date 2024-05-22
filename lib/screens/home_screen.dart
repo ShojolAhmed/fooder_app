@@ -12,9 +12,56 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
+
     return SingleChildScrollView(
       child: Column(
         children: [
+          const SizedBox(height: 40),
+          Padding(
+            padding: const EdgeInsets.symmetric(
+              vertical: 20,
+              horizontal: kHorizontalPadding,
+            ),
+            child: Row(
+              children: [
+                Container(
+                  padding:
+                      const EdgeInsets.symmetric(vertical: 10, horizontal: 14),
+                  constraints: BoxConstraints(maxWidth: size.width * .6),
+                  decoration: BoxDecoration(
+                    color: kTertiaryColor,
+                    borderRadius: BorderRadius.circular(50),
+                  ),
+                  child: const Text(
+                    maxLines: 1,
+                    softWrap: true,
+                    overflow: TextOverflow.ellipsis,
+                    'Uttar Khan Thana, Dhaka',
+                    style: TextStyle(
+                      fontSize: 14,
+                      color: kSecondaryTextColor,
+                    ),
+                  ),
+                ),
+                const Spacer(),
+                InkWell(
+                  borderRadius: BorderRadius.circular(50),
+                  onTap: () {
+                    print('Notification Button');
+                  },
+                  child: const CircleAvatar(
+                    radius: 18,
+                    backgroundColor: kPrimaryColor,
+                    child: Icon(
+                      Icons.notifications_outlined,
+                      color: kOnPrimaryColor,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
           // TOP PART:
           // header texts and grid items
           Container(
