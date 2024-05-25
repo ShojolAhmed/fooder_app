@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:fooder_app/main.dart';
 import 'package:fooder_app/values/constants.dart';
 import 'package:fooder_app/widgets/promo_screen/filter_button.dart';
-import 'package:fooder_app/widgets/promo_screen/promo_item_card.dart';
+import 'package:fooder_app/widgets/item_card.dart';
 
 class PromoScreen extends StatelessWidget {
   const PromoScreen({super.key});
@@ -59,7 +59,7 @@ class PromoScreen extends StatelessWidget {
               ),
               itemCount: promoItemsList.length,
               itemBuilder: (ctx, index) {
-                return PromoItemCard(
+                return ItemCard(
                   item: promoItemsList[index],
                 );
               },

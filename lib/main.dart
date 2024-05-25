@@ -9,13 +9,12 @@ import 'package:fooder_app/values/colors.dart';
 import 'package:fooder_app/values/styles.dart';
 import 'package:fooder_app/widgets/navigation_bar/navigation_bar_button.dart';
 
-final List<FoodAndRestaurant> foodAndRestaurantList = [];
-final List<FoodAndRestaurant> promoItemsList = foodAndRestaurantList;
-void generateFoodAndRestaurantList() {
+final List<FoodAndRestaurant> promoItemsList = [];
+void generatePromoItemsList() {
   for (var food in dummyPromoFood) {
     for (var restaurant in dummyRestaurants) {
       if (restaurant.id == food.restaurantId) {
-        foodAndRestaurantList.add(FoodAndRestaurant(
+        promoItemsList.add(FoodAndRestaurant(
           food: food,
           restaurant: restaurant,
         ));
@@ -25,7 +24,7 @@ void generateFoodAndRestaurantList() {
 }
 
 void main() {
-  generateFoodAndRestaurantList();
+  generatePromoItemsList();
   runApp(const App());
 }
 

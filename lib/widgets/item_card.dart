@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:fooder_app/model/food_and_restaurant.dart';
 import 'package:fooder_app/values/colors.dart';
 import 'package:fooder_app/values/constants.dart';
-import 'package:fooder_app/widgets/promo_screen/promo_item_food.dart';
+import 'package:fooder_app/widgets/item_food.dart';
 
-class PromoItemCard extends StatelessWidget {
-  const PromoItemCard({
+class ItemCard extends StatelessWidget {
+  const ItemCard({
     super.key,
     required this.item,
   });
@@ -68,7 +68,8 @@ class PromoItemCard extends StatelessWidget {
               color: kSecondaryTextColor.withOpacity(.3),
             ),
           ),
-          PromoItemFood(food: item.food),
+          const SizedBox(height: 24),
+          ItemFood(food: item.food),
         ],
       ),
     );

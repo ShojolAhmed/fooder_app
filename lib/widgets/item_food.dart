@@ -4,8 +4,8 @@ import 'package:fooder_app/values/colors.dart';
 import 'package:fooder_app/values/constants.dart';
 import 'package:fooder_app/widgets/add_to_favorite_button.dart';
 
-class PromoItemFood extends StatelessWidget {
-  const PromoItemFood({
+class ItemFood extends StatelessWidget {
+  const ItemFood({
     super.key,
     required this.food,
   });
@@ -18,7 +18,6 @@ class PromoItemFood extends StatelessWidget {
 
     return Column(
       children: [
-        const SizedBox(height: 24),
         Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
