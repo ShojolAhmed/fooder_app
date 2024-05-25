@@ -5,8 +5,7 @@ import 'package:google_fonts/google_fonts.dart';
 final theme = ThemeData(
   scaffoldBackgroundColor: kBackgroundColor,
   textTheme: GoogleFonts.poppinsTextTheme(),
-  // appBarTheme: const AppBarTheme().copyWith(
-  //   backgroundColor: kBackgroundColor,
-  //   toolbarHeight: 80,
-  // ),
+  appBarTheme: const AppBarTheme().copyWith(
+    backgroundColor: Colors.white,
+  ),
 );

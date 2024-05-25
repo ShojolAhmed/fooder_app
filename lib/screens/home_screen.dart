@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fooder_app/main.dart';
+import 'package:fooder_app/screens/promo_screen.dart';
 import 'package:fooder_app/values/colors.dart';
 import 'package:fooder_app/values/constants.dart';
 import 'package:fooder_app/widgets/home/grid_row.dart';
@@ -108,7 +109,15 @@ class HomeScreen extends StatelessWidget {
                 const Spacer(),
                 TextButton(
                   style: TextButton.styleFrom(foregroundColor: kPrimaryColor),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (ctx) {
+                          return const PromoScreen();
+                        },
+                      ),
+                    );
+                  },
                   child: const Text('See all'),
                 ),
               ],

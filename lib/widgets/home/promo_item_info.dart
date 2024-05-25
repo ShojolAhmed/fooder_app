@@ -20,8 +20,6 @@ class PromoItemInfo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const int lowStockAmount = 10;
-
     return Stack(
       children: [
         Container(

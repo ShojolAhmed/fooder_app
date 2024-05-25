@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fooder_app/model/food_and_restaurant.dart';
-import 'package:fooder_app/values/colors.dart';
 import 'package:fooder_app/values/constants.dart';
+import 'package:fooder_app/widgets/add_to_favorite_button.dart';
 import 'package:fooder_app/widgets/home/promo_item_info.dart';
 import 'package:transparent_image/transparent_image.dart';
 
@@ -48,17 +48,10 @@ class PromoItem extends StatelessWidget {
                   previousPrice: food.previousPrice,
                   amountLeft: food.amountLeft),
             ),
-            Positioned(
+            const Positioned(
               top: 20,
               right: 20,
-              child: CircleAvatar(
-                backgroundColor: Colors.white,
-                child: IconButton(
-                  onPressed: () {},
-                  icon: const Icon(Icons.favorite_border),
-                  color: kPrimaryColor,
-                ),
-              ),
+              child: AddToFavoriteButton(),
             ),
           ],
         ),

@@ -97,6 +97,7 @@ const List<Restaurant> dummyRestaurants = [
 
 const List<Food> dummyFoods = [
   Food(
+    id: 'f1',
     name: 'Mutton Kacchi',
     imageUrl:
         'https://i.pinimg.com/564x/56/25/18/562518009aa9a63d6c490a254ee53796.jpg',
@@ -107,6 +108,7 @@ const List<Food> dummyFoods = [
     amountLeft: 9,
   ),
   Food(
+    id: 'f2',
     name: 'Beef Kacchi',
     imageUrl:
         'https://i.pinimg.com/564x/33/58/51/3358512b27dafac94381fa41d409adac.jpg',
@@ -117,6 +119,7 @@ const List<Food> dummyFoods = [
     amountLeft: 30,
   ),
   Food(
+    id: 'f3',
     name: 'Tehari with beef',
     imageUrl:
         'https://i.pinimg.com/564x/16/bc/af/16bcaf112065dc5cc9f97f4f66b1df7f.jpg',
@@ -127,6 +130,7 @@ const List<Food> dummyFoods = [
     amountLeft: 45,
   ),
   Food(
+    id: 'f4',
     name: 'Special Khichuri',
     imageUrl:
         'https://i.pinimg.com/564x/d1/8b/fa/d18bfa6467dd97dcc7d07bb350c038c6.jpg',
@@ -137,6 +141,7 @@ const List<Food> dummyFoods = [
     amountLeft: 8,
   ),
   Food(
+    id: 'f5',
     name: '14" Pizza with Extra Cheese',
     imageUrl:
         'https://i.pinimg.com/564x/e6/1c/ef/e61cef37dffe3af9ce48d9e119176203.jpg',
@@ -147,6 +152,7 @@ const List<Food> dummyFoods = [
     amountLeft: 45,
   ),
   Food(
+    id: 'f6',
     name: 'Momo',
     imageUrl:
         'https://i.pinimg.com/564x/98/13/31/9813314076f31996a326287ca74b4960.jpg',
@@ -157,6 +163,7 @@ const List<Food> dummyFoods = [
     amountLeft: 45,
   ),
   Food(
+    id: 'f7',
     name: 'Sub Burger',
     imageUrl:
         'https://i.pinimg.com/564x/f5/bd/55/f5bd5510b2a1c2dac5470a3a813cfed0.jpg',
@@ -167,6 +174,7 @@ const List<Food> dummyFoods = [
     amountLeft: 7,
   ),
   Food(
+    id: 'f8',
     name: 'Mutton Kacchi with Extra Masala',
     imageUrl:
         'https://i.pinimg.com/564x/d1/26/7d/d1267d54e4395ddd8915edc0989c750c.jpg',
@@ -177,6 +185,7 @@ const List<Food> dummyFoods = [
     amountLeft: 5,
   ),
   Food(
+    id: 'f9',
     name: 'Normal Sized Burger',
     imageUrl:
         'https://i.pinimg.com/564x/44/10/84/441084f382f4bb0d37f31749aad112d8.jpg',
@@ -187,6 +196,7 @@ const List<Food> dummyFoods = [
     amountLeft: 45,
   ),
   Food(
+    id: 'f10',
     name: 'Chicken Shwarma with Veges',
     imageUrl:
         'https://i.pinimg.com/564x/37/db/d9/37dbd9ba03cf3dba7b258cfff014c06e.jpg',
@@ -196,4 +206,13 @@ const List<Food> dummyFoods = [
     deliveryFee: 0,
     amountLeft: 3,
   ),
+];
+
+final List<Food> dummyPromoFood = [
+  dummyFoods[9],
+  dummyFoods[4],
+  dummyFoods[0],
+  dummyFoods[3],
+  dummyFoods[7],
+  dummyFoods[1],
 ];
