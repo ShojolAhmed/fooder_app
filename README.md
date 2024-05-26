@@ -1,16 +1,31 @@
-# fooder_app
+# Food Delivery App Demo Project
+A simple demo food delivery app to showcase basic Flutter functionalities.
 
-A new Flutter project.
+## Introduction
+This project demonstrates basic features and components of a Flutter application. It's designed as a starting point and it can receive further improvements.
 
-## Getting Started
+## Features
+- Simple UI with basic Flutter widgets
+- Navigation between screens
+- Usage of Images over the network
+- Usage of Google Fonts
 
-This project is a starting point for a Flutter application.
+## Screenshots
+<img src="https://i.ibb.co/GQMTVq1/flutter-01.png" alt="App Screenshot 1" height="300"/> <img src="https://i.ibb.co/0YjvxS0/flutter-02.png" alt="App Screenshot 2" height="300"/> <img src="https://i.ibb.co/rHPvVfp/flutter-03.png" alt="App Screenshot 3" height="300"/>
 
-A few resources to get you started if this is your first Flutter project:
+## Installation
+### Prerequisites
+Ensure you have [Flutter SDK](https://docs.flutter.dev/get-started/install) installed. You can check by running:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+```bash
+flutter --version
+```
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### Steps
+1. Clone the `fooder_app` repository
+2. Run `cd fooder_app` to enter the project directory
+3. Run `flutter pub get` to download dependencies
+4. Run `flutter run` to start the app
+
+## Contributing
+This is a demo project. If you'd like to contribute, please fork the repository and submit a pull request with your changes.
