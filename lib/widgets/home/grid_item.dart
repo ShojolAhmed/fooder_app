@@ -8,35 +8,33 @@ class GridItem extends StatelessWidget {
     required this.rowWidth,
     required this.icon,
     required this.label,
-    required this.onPress,
+    required this.onPressed,
   });
 
   final double rowWidth;
   final IconData? icon;
   final String label;
-  final Function()? onPress;
+  final Function()? onPressed;
 
   @override
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        InkWell(
-          borderRadius: BorderRadius.circular(kBorderRadius),
-          onTap: onPress,
-          child: Container(
-            height: rowWidth * .23,
-            width: rowWidth * .23,
-            decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(kBorderRadius),
-            ),
-            child: Icon(
-              icon,
-              size: rowWidth * .1,
-              color: kPrimaryColor,
+        IconButton.filled(
+          style: IconButton.styleFrom(
+            padding: EdgeInsets.all(rowWidth * .065),
+            backgroundColor: Colors.white,
+            shape: const RoundedRectangleBorder(
+              borderRadius: BorderRadius.all(
+                Radius.circular(kBorderRadius),
+              ),
             ),
           ),
+          onPressed: onPressed,
+          icon: Icon(icon),
+          color: kPrimaryColor,
+          iconSize: rowWidth * .1,
         ),
         const SizedBox(height: 8),
         Text(

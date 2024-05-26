@@ -7,5 +7,6 @@ final theme = ThemeData(
   textTheme: GoogleFonts.poppinsTextTheme(),
   appBarTheme: const AppBarTheme().copyWith(
     backgroundColor: Colors.white,
+    iconTheme: const IconThemeData(color: kPrimaryColor),
   ),
 );

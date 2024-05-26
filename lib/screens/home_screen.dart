@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fooder_app/main.dart';
+import 'package:fooder_app/screens/home/notifications_screen.dart';
 import 'package:fooder_app/screens/promo_screen.dart';
 import 'package:fooder_app/values/colors.dart';
 import 'package:fooder_app/values/constants.dart';
@@ -38,7 +39,7 @@ class HomeScreen extends StatelessWidget {
                       maxLines: 1,
                       softWrap: true,
                       overflow: TextOverflow.ellipsis,
-                      'Uttar Khan Thana, Dhaka',
+                      'User Area Location, City',
                       style: TextStyle(
                         fontSize: 14,
                         color: kSecondaryTextColor,
@@ -46,20 +47,53 @@ class HomeScreen extends StatelessWidget {
                     ),
                   ),
                   const Spacer(),
-                  InkWell(
-                    borderRadius: BorderRadius.circular(50),
-                    onTap: () {
-                      print('Notification Button');
-                    },
-                    child: const CircleAvatar(
-                      radius: 18,
-                      backgroundColor: kPrimaryColor,
-                      child: Icon(
-                        Icons.notifications_outlined,
-                        color: kOnPrimaryColor,
+                  Stack(
+                    children: [
+                      Container(
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black.withOpacity(0.05),
+                              spreadRadius: 1,
+                              blurRadius: 5,
+                            ),
+                          ],
+                        ),
+                        child: IconButton.filled(
+                          style: IconButton.styleFrom(
+                            backgroundColor: kPrimaryColor,
+                          ),
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (ctx) {
+                                  return const NotificationsScreen();
+                                },
+                              ),
+                            );
+                          },
+                          icon: const Icon(Icons.notifications_outlined),
+                          color: Colors.white,
+                        ),
                       ),
-                    ),
-                  ),
+                      Positioned(
+                        right: 2,
+                        bottom: 2,
+                        child: Container(
+                          height: 16,
+                          width: 16,
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            color: Colors.yellow,
+                            border:
+                                Border.all(color: kBackgroundColor, width: 2),
+                          ),
+                        ),
+                      ),
+                    ],
+                  )
                 ],
               ),
             ),

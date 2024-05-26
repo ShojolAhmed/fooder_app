@@ -17,6 +17,7 @@ class _SearchScreenState extends State<SearchScreen> {
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: kHorizontalPadding),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const Padding(
                 padding: EdgeInsets.symmetric(
@@ -25,7 +26,6 @@ class _SearchScreenState extends State<SearchScreen> {
                 ),
                 child: Text(
                   'Looking for Something?',
-                  textAlign: TextAlign.start,
                   style: TextStyle(
                     fontSize: 36,
                     fontWeight: FontWeight.bold,
