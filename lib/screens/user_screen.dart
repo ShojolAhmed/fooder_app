@@ -25,7 +25,7 @@ class UserScreen extends StatelessWidget {
                       shape: BoxShape.circle,
                       image: DecorationImage(
                         fit: BoxFit.cover,
-                        image: NetworkImage("https://i.imgur.com/BoN9kdC.png"),
+                        image: AssetImage('assets/images/user.png'),
                       ),
                     ),
                   ),
