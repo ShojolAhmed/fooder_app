@@ -99,10 +99,10 @@ class ItemFood extends StatelessWidget {
                       ],
                     ),
                     const SizedBox(height: 12),
-                    const Row(
+                    Row(
                       mainAxisSize: MainAxisSize.min,
                       children: [
-                        CircleAvatar(
+                        const CircleAvatar(
                           radius: 10,
                           backgroundColor: kSecondaryColor,
                           child: Icon(
@@ -111,10 +111,12 @@ class ItemFood extends StatelessWidget {
                             size: 14,
                           ),
                         ),
-                        SizedBox(width: 6),
+                        const SizedBox(width: 6),
                         Text(
-                          'Free Delivery',
-                          style: TextStyle(
+                          food.deliveryFee == 0
+                              ? 'Free Delivery'
+                              : 'Delivery fee Tk ${food.deliveryFee.toStringAsFixed(2)}',
+                          style: const TextStyle(
                             color: kSecondaryTextColor,
                           ),
                         ),
